@@ -10,7 +10,8 @@ import TextFiled from "../../atoms/textFiled";
 import { styleTextFilead } from "../../styles/index";
 import { useAuthClient } from "../../hooks/useAuth.js";
 import { notConfirmedSPasswrdStyle } from "../../styles";
-
+import PhoneTextInput from "../../atoms/phoneInput";
+import { phoneINputValidator } from "./../../styles/index";
 function ClientFormSignup() {
   const navigate = useNavigate();
   const {
@@ -65,7 +66,7 @@ function ClientFormSignup() {
         value={email}
         placeholder="Enter Email"
         field="Email"
-        type="text"
+        type="email"
         handleChange={(e) => onChange(e)}
         name={"email"}
       />
@@ -97,6 +98,13 @@ function ClientFormSignup() {
         field={"Create An Account"}
         style={colorButtonCreate}
       />
+     {/*  <PhoneTextInput
+        value={phone}
+        placeholder="Enter Phone Number"
+        field="Phone Number"
+        type="text"
+        style={phoneINputValidator}
+      /> */}
     </Form>
   );
 }

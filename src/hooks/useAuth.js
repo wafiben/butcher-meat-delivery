@@ -1,7 +1,9 @@
+import { authClient } from "./../services/authSevice";
 import { useEffect, useState } from "react";
+import { Auth } from "./../services/authSevice";
 export const useAuthClient = () => {
+  const { loginClient, signUpClient } = authClient();
   const [useInfoClient, setUserInfoClient] = useState({
-    role: "client",
     name: null,
     phone: null,
     email: null,
@@ -16,6 +18,17 @@ export const useAuthClient = () => {
   const setTimeShow = () => {
     setTimeout(() => setMessageConfirmation(""), 3000);
   };
+  const fetch = async () => {
+    try {
+      const { data } = await signUpClient(
+        "https://jsonplaceholder.typicode.com/todos/1"
+      );
+      console.log(data);
+    } catch (error) {
+      console.log("ther is an error"); 
+    }
+  };
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (password !== confirmationPassword) {
@@ -28,7 +41,9 @@ export const useAuthClient = () => {
         setTimeShow();
       }
     }
+    fetch();
   };
+
   return {
     useInfoClient,
     onChange,

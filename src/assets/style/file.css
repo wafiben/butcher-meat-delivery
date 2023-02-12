@@ -1,0 +1,103 @@
+.text-white {
+  color: #fff !important;
+}
+.ui-bg-overlay-container,
+.ui-bg-video-container {
+  position: relative;
+}
+.ui-bg-cover {
+  background-color: transparent;
+  background-position: center center;
+  background-size: cover;
+}
+.ui-bg-overlay-container .ui-bg-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.bg-dark {
+  background-color: rgba(24, 28, 33, 0.9) !important;
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 207, 84) 11.2%,
+    rgb(255, 158, 27) 91.1%
+  );
+}
+.opacity-50 {
+  opacity: 0.5 !important;
+}
+.bg-dark {
+  background-color: rgba(24, 28, 33, 0.9) !important;
+}
+.ui-bg-overlay-container > *,
+.ui-bg-video-container > * {
+  position: relative;
+}
+
+.media,
+.media > :not(.media-body),
+.jumbotron,
+.d-flex,
+.d-inline-flex,
+.media,
+.media > :not(.media-body),
+.jumbotron,
+.card {
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+.ui-w-100 {
+  width: 100px !important;
+  height: auto;
+}
+.font-weight-bold {
+  font-weight: 0 !important;
+}
+.opacity-75 {
+  opacity: 0.75 !important;
+}
+.nav-tabs:not(.nav-fill):not(.nav-justified) .nav-link,
+.nav-pills:not(.nav-fill):not(.nav-justified) .nav-link {
+  margin-right: 0.995rem;
+}
+.nav-tabs.tabs-alt .nav-link,
+.tabs-alt > .nav-tabs .nav-link {
+  border-width: 10 !important;
+  border-radius: 10 !important;
+  background-color: transparent !important;
+}
+.nav-tabs .nav-link.active {
+  background: linear-gradient(
+    109.6deg,
+    rgb(255, 207, 84) 11.2%,
+    rgb(255, 158, 27) 91.1%
+  );
+}
+.container {
+  text-align: center !important;
+  padding-left: 500px !important;
+}
+.card-body {
+  width: 500px !important;
+  margin: auto;
+}
+.card {
+  width: 500px !important;
+  margin: auto !important;
+}
+.cordonate {
+  margin-top: 100px !important;
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}

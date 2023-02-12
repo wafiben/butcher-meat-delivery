@@ -33,3 +33,7 @@ export const notConfirmedSPasswrdStyle = {
   fontWeight: "normal",
   fontSize: "14px",
 };
+export const phoneINputValidator = {
+  borderStyle: "inset",
+  borderColor: "-internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133))",
+};
