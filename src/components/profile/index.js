@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarAfterConnect from "../navbars/NavbarAfterConnect";
 import logo from "../../assets/images/logo.png";
-import logoButcher from "../../assets/images/logo-butcher.jpg";
+
 
 function Profile() {
   return (

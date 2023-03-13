@@ -101,3 +101,39 @@ input[type="file"] {
   display: inline-block;
   cursor: pointer;
 }
+
+.container-item {
+  border-width: 4px;
+  border-color: black;
+  border-style: solid;
+}
+.image-product {
+  border-radius: 50%;
+}
+
+.navbar-company {
+  margin-bottom: 100px;
+}
+.btn-add {
+  margin-right: 555px !important;
+}
+.container-header {
+  background-color: white;
+  height: 55px;
+  padding: 5px;
+  width: 80%;
+  margin: auto;
+  display: flex !important;
+  justify-content: space-between !important;
+  text-align: center;
+  align-items: center;
+}
+.title-header {
+  font-weight: normal;
+  font-size: 17px;
+}
+.dropdown-list {
+  position: relative;
+  bottom: 38px;
+  left: 65%;
+}

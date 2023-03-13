@@ -8,8 +8,11 @@ import LoginPage from "./Google";
 import Home from "./components/home";
 import "./App.css";
 import Profile from "./components/profile";
+import ClientSpace from "./pages/ClientSpace";
+import CompanySpace from "./pages/CompanySpace";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DashboardCompany from "./pages/DashboardCompany";
 
 function App() {
   const routes = [
@@ -23,6 +26,12 @@ function App() {
       element: <Home />,
     },
     { path: "/profile", element: <Profile /> },
+    { path: "/client-space", element: <ClientSpace /> },
+    {
+      path: "/company-space",
+      element: <CompanySpace />,
+      children: [{ path: "dashboard", element: <DashboardCompany /> }],
+    },
   ];
   const router = createBrowserRouter(routes);
   const isAuth = true;
