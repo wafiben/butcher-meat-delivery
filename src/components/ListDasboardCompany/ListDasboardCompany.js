@@ -3,54 +3,56 @@ import Table from "react-bootstrap/Table";
 import imageProduct from "../../assets/images/imageProduct.jpg";
 import "../../assets/style/file.css";
 import CheckboxForm from "./CheckboxForm";
-import Button from "react-bootstrap/Button";
 import "../../assets/style/file.css";
 import HeaderDasboard from "./HeaderDasboard";
+import ArticleAction from "./ArticleAction";
+import { useSelector } from "react-redux";
 function ListDasboardCompany() {
+  const { list } = useSelector((state) => state.listReducer);
+  console.log(list);
   return (
     <>
       <HeaderDasboard />
-      <Table>
-        <thead>
-          <tr>
-            <th> Product</th>
-            <th>Status</th>
-            <th>Unit price</th>
-            <th>Stock</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              {" "}
-              <img
-                src={imageProduct}
-                alt="image-product"
-                width="50"
-                className="image-product"
-              />{" "}
-              product 1
-            </td>
-            <td>
-              <CheckboxForm />
-            </td>
-            <td>0000</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
+      <div className="table-list">
+        <Table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Status</th>
+              <th>Unit price</th>
+              <th>Stock</th>
+              <th>unit</th>
+              <th>Product actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {list.map(({ name, price, qte, unit }) => (
+              <tr>
+                <td>
+                  {" "}
+                  <img
+                    src={imageProduct}
+                    alt="image-product"
+                    width="50"
+                    className="image-product"
+                  />{" "}
+                  {name}
+                </td>
+                <td>
+                  <CheckboxForm />
+                </td>
+                <td>{price}</td>
+                <td>{qte}</td>
+                <td>{unit}</td>
 
-            <td>Stock</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>Stock</td>
-          </tr>
-        </tbody>
-      </Table>
+                <td>
+                  <ArticleAction />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
     </>
   );
 }

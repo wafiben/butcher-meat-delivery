@@ -9,10 +9,10 @@ function HeaderDasboard() {
   const handleShow = () => setShow(true);
   return (
     <div className="container-header">
-      <h3 className="title-header">List of product (total :8)</h3>
-      <Button variant="primary" onClick={handleShow}>
+      <h3 className="title-header">List of product (total : 8)</h3>
+      <Button className="action-product" onClick={handleShow}>
         Add Product
-      </Button>{" "}
+      </Button>
       <AddProducModal handleClose={handleClose} show={show} />
     </div>
   );
